@@ -1,0 +1,36 @@
+{
+    "endpoints": [
+        "0.0.0.0:8080"
+    ],
+    "backlog": 128,
+    "threads": 2,
+    "buffer_size": 65536,
+    "logger": {
+        "file": "/srv/rift/log.txt",
+        "level": 4
+    },
+    "daemon": {
+        "fork": true,
+        "uid": 1000
+    },
+    "monitor-port": 21000,
+    "application": {
+        "remotes": [
+            "localhost:1025:2",
+            "localhost:1026:2",
+            "localhost:1027:2"
+        ],
+        "groups": [],
+        "metadata-groups": [
+            3
+        ],
+        "bucket": {
+            "timeout": 60
+        },
+        "read-timeout": 10,
+        "write-timeout": 16,
+        "redirect-port": 8081,
+        "path-prefix": "/srv/elliptics/"
+    }
+}
+

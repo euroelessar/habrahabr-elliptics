@@ -1,0 +1,41 @@
+{
+	"loggers": {
+		"type": "/srv/elliptics/1/log.txt",
+		"level": 4
+	},
+	"options": {
+		"join": true,
+		"flags": 4,
+		"remote": [
+            "localhost:1026:2",
+            "localhost:1027:2"
+        ],
+		"address": [
+			"localhost:1025:2"
+		],
+		"wait_timeout": 60,
+		"check_timeout": 60,
+		"io_thread_num": 16,
+		"nonblocking_io_thread_num": 16,
+		"net_thread_num": 4,
+		"daemon": true,
+		"auth_cookie": "Habrahabr-secret-key",
+		"cache": {
+			"size": 1073741824
+		},
+		"indexes_shard_count": 16,
+		"monitor_port": 20000
+	},
+	"backends": [
+		{
+			"type": "blob",
+			"group": 1,
+			"history": "/srv/elliptics/1/history",
+			"data": "/srv/elliptics/1/blob/data",
+			"sync": "-1",
+			"blob_flags": "129",
+			"blob_size": "10G",
+			"records_in_blob": "1000000"
+		}
+	]
+}

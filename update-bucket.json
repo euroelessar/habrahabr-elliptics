@@ -1,0 +1,17 @@
+ {
+    "groups": [
+        2
+    ],
+    "acl": [
+        {
+            "user": "admin",
+            "token": "favorite_music",
+            "flags": 0
+        },
+        {
+            "user": "*",
+            "token": "very_secret_token",
+            "flags": 1
+        }
+    ]
+}
